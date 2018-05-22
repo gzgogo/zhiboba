@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='header'>
+    <picker bindchange="bindGameChange" value="{{gameIndex}}" range="{{games}}">
+      <view class="picker">
+        {{games[gameIndex]}}
+      </view>
+    </picker>
+  </view> 
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
