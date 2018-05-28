@@ -1,13 +1,9 @@
 <!--index.wxml-->
 <view class="container">
-  <view class='header'>
-    <picker bindchange="bindGameChange" value="{{gameIndex}}" range="{{games}}">
-      <view class="picker">
-        {{games[gameIndex]}}
-      </view>
-    </picker>
-  </view> 
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <tabs dataSource="{{gameTypes}}" defaultValue="{{currentType}}" bindchange="onTypeChange"/>
+  <view class="games">
+    <view class="game" wx:for="{{games}}" wx:key="id">
+    
+    </view>
   </view>
 </view>
