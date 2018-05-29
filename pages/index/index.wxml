@@ -1,9 +1,28 @@
 <!--index.wxml-->
 <view class="container">
   <tabs dataSource="{{gameTypes}}" defaultValue="{{currentType}}" bindchange="onTypeChange"/>
-  <view class="games">
-    <view class="game" wx:for="{{games}}" wx:key="id">
-    
+  <view class="lives">
+    <view class="live" wx:for="{{lives}}" wx:for-item="live" wx:key="formatDate">
+      <view class="datetime">{{live.date}}</view>
+      <view class="game" wx:for="{{live.list}}" wx:for-item="game" wx:key="id" bindtap='onGameTap' data-url="{{game.url}}">
+        <view class='game-meta'>
+          <view class="game-time">{{game.time}}</view>
+          <view class="game-name">{{game.league ? game.league.name_cn : ''}}</view>
+        </view>
+        <view class="game-teams-keywords">
+          <view class="game-teams">
+            <view class="game-team home">
+              <image src="{{'https://duihui.qiumibao.com/nba/'+game.home_logo+'.png'}}" class="logo"></image>
+              <text class="name">{{game.home_team}}</text>
+            </view>
+            <view class="game-team visit">
+              <image src="{{'https://duihui.qiumibao.com/nba/'+game.visit_logo+'.png'}}" class="logo"></image>
+              <text class="name">{{game.visit_team}}</text>
+            </view>
+          </view> 
+          <view class="game-keywords">{{game.keywords}}</view>
+        </view>
+      </view>
     </view>
   </view>
 </view>
