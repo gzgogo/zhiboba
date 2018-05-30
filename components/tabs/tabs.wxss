@@ -1,6 +1,6 @@
 .tabs {
     width: 100%;
-    border-bottom: 2rpx solid #ccc;
+    /* border-bottom: 2rpx solid #ccc; */
     text-align: center;
     height: 88rpx;
     line-height: 88rpx;
@@ -13,6 +13,6 @@
     color:#434343;
 }
 .tab-item.active{
-    color:#F65959;
-    border-bottom: 4rpx solid #F65959;
+    color:#2e9ffe;
+    border-bottom: 4rpx solid #2e9ffe;
 }

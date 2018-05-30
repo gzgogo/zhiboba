@@ -20,16 +20,16 @@
 }
 
 .live .game .game-meta {
-  width: 180rpx;
+  width: 200rpx;
 }
 
 .live .game .game-meta .game-time {
-  margin-bottom: 10rpx;
   font-size: 26rpx;
   font-weight: bolder;
 }
 
 .live .game .game-meta .game-name {
+  margin-top: 10rpx;  
   font-size: 24rpx;
   /* white-space: nowrap; */
   color: #94999a;
@@ -40,6 +40,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.live .game .game-teams-keywords .game-name {
+  font-size: 32rpx;
+  /* font-weight: bolder; */
 }
 
 .live .game .game-teams {
